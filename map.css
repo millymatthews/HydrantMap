@@ -1,0 +1,60 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+html, body, #mapid {
+    height: 100vh;
+    width: 100vw;
+}
+
+.mapid {
+}
+
+.button {
+    padding: 8px 8px;
+    font: 16px Arial, Helvetica, sans-serif;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    border: thin solid black;
+}
+
+.button:hover {
+    background-color: lightgrey;
+}
+
+a:link, a:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    border: thin solid black;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+.legend {
+    line-height: 20px;
+    color: #555;
+}
+.legend circle {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 2px;
+    opacity: 0.8;
+    border-radius: 50%;
+}

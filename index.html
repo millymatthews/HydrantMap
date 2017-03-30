@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- encoding -->
+    <meta charset="utf-8">
+
+    <!-- meta -->
+    <meta name="author" content="Milly Matthews-Mulroy">
+    <meta name="description" content="Hydrant locator for Cambridge MA info page">
+
+    <!-- title -->
+    <title>Cambridge Hydrant Locator</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" media="all" href="common.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  </head>
+
+	<body>
+
+    <!-- page title -->
+    <div>
+      <h1>Cambridge Hydrant Locator</h1>
+    </div>
+
+    <br>
+
+    <hr> <!-- section break -->
+
+    <!-- map button -->
+    <div style="margin-top:70px; margin-bottom:70px; text-align:center">
+          <a href="map.html" class="button1">Go to Map >>></a>
+
+    </div>
+
+    <!-- web application info-->
+    <div>
+      <p class="linespace">
+        The Cambridge Hydrant Locator is a prototype mapping application, designed for the residents of Cambridge to detect and display localised fire hydrants in emergency response situations (e.g. fire incidence) and for neighbourhood management (e.g. winter snow clearance and maintenance).
+      </p>
+
+      <p class="linespace">
+        There are 1901<sup>1</sup> Cambridge fire hydrants currently maintained by the Engineering group of Cambridge Water Department<sup>2</sup>. The city boasts a Class 1 fire department due to the relatively high fire risk caused by a significant presence of old wooden, three story residential housing throughout the area.
+      </p>
+
+      <p class="linespace">
+        In 2016 alone, there were 550 building fires attended to by the city fire department <sup>3</sup>, including a devastating blaze that destroyed 16 buildings in one street. <sup>4</sup>.
+      </p>
+
+      <br>
+
+    </div>
+
+    <hr> <!-- section break -->
+
+    <!--how it works -->
+    <div>
+      <h2> How it works </h2>
+      <p class="linespace">
+
+        <br>
+        1)	detecting and positioning a user on the map
+
+        <br>
+        <img src="images/Location.png" alt="User Location" style="width:30px;">
+
+        <br>
+        2)	calculating a 200-metre buffer around the user location
+
+        <br>
+        <img src="images/CirclePoint.png" alt="User Location" style="width:30px;">
+
+        <br>
+        3)	displaying all fire hydrants within the buffer
+
+        <br>
+        <img src="images/FireIcon.png" alt="User Location" style="width:30px;">
+
+        <br>
+        <br>
+
+        To go to 'my location' on the map, a user must share or turn on their devices location. If a devices location is not shared, panning to an area of interest in the city will trigger the map to recalculate the buffer based on the centre of the map. Hydrants are colour categorised by flow rate, and can be individually selected to show their rate in Gallons Per Minute (GPM).
+      </p>
+
+      <br>
+
+    </div>
+
+
+    <hr> <!-- section break -->
+
+    <!-- map button -->
+    <div style="margin-top:70px; margin-bottom:70px; text-align:center">
+          <a href="map.html" class="button1">Go to Map >>></a>
+
+    </div>
+
+    <!-- site footer -->
+    <div class="footer"><p>Reference and copyrights</p>
+
+      <!-- references-->
+      <ol>
+        <li> City of Cambridge GIS (2017). Hydrants. [online] avialable at: https://www.cambridgema.gov </li>
+        <li> Cambridge Water Department (2017). Hydrants Map. [online] available at: https://www.cambridgema.gov/Water/Engineering/hydrantsmap </li>
+        <li> Cambridge Fire Department  (2017). Fire Statistics. [online]  available at: https://www.cambridgema.gov</li>
+        <li> Moskowitz, E and Quintana, O (2016). Cambridge fire official says it’s a ‘miracle’ no one died in massive blaze. [online] <i>Boston Globe Metro.</i> Available at: https://www.bostonglobe.com/metro</li>
+      </ol>
+
+      <!-- copyrights -->
+      <ul style="list-style-type:none">
+        <li> Circle Point Icon by: <a href="http://www.bogdanrosu.com/">Bogdan Rosu Creative</a></li>
+        <li> Location Icon &copy; Google Design</li>
+        <li> Fire Icon by: <a href="http://pixelbazaar.com/">Zlatko Najdenovski</a></li>
+      </ul>
+
+    </div> <!-- end footer -->
+
+  </body>
+</html>
