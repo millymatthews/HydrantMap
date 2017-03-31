@@ -1,4 +1,32 @@
-// hydrants.js - Javascript for displaying Cambridge MA tree map
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: hydrants.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: hydrants.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// hydrants.js - Javascript for displaying Cambridge MA tree map
 
 /**
 * hydrants.js 0.1 March 2017
@@ -55,17 +83,17 @@ function hydrantColour(flowRate){
   if (flowRate > 1499){
     return 'blue';
   }
-  else if (flowRate > 999 && flowRate < 1500){
+  else if (flowRate > 999 &amp;&amp; flowRate &lt; 1500){
     return 'green';
   }
-  else if (flowRate > 649 && flowRate < 1000){
+  else if (flowRate > 649 &amp;&amp; flowRate &lt; 1000){
     return 'orange';
   }
-  else if (flowRate > 449 && flowRate < 650){
+  else if (flowRate > 449 &amp;&amp; flowRate &lt; 650){
     return 'red';
   }
   else {
-    return 'black'; // < 450 GPM
+    return 'black'; // &lt; 450 GPM
   }
 }
 
@@ -77,7 +105,7 @@ function hydrantColour(flowRate){
 var onEachFeature = function (feature, layer) {
 
 	//popup content
-	var content = "<h3> Hydrant GPM : " + feature.properties.HYDRANT_GPM + "</h3>";
+	var content = "&lt;h3> Hydrant GPM : " + feature.properties.HYDRANT_GPM + "&lt;/h3>";
 	layer.bindPopup(content);
 
 }
@@ -175,7 +203,7 @@ function main(){
 
 	// mapbox basemap
 	var tiles = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWlsbHltYXR0aGV3c211bHJveSIsImEiOiJjaXpzdW9zb2owM2JkMnFueTVva3M0ZjA5In0.IybFKf9Su38aWUDKDDmhcA', {
-		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		attribution: 'Map data &amp;copy; &lt;a href="http://openstreetmap.org">OpenStreetMap&lt;/a> contributors, &lt;a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA&lt;/a>, Imagery © &lt;a href="http://mapbox.com">Mapbox&lt;/a>',
 		maxZoom: 20,
 		id: 'mapbox.streets',
 	}).addTo(map);
@@ -206,7 +234,7 @@ function main(){
 	// location button on map
 	locationBox.onAdd = function (map) {
 	    this._div = L.DomUtil.create('div', 'button'); // create a div with a class "button"
-			this._div.innerHTML = '<div id="mylocation"><a href="#">My Location</a></div>';
+			this._div.innerHTML = '&lt;div id="mylocation">&lt;a href="#">My Location&lt;/a>&lt;/div>';
 
 			L.DomEvent.addListener(this._div, 'click', function(){map.locate({setView: true, maxZoom: 17})});
 
@@ -220,7 +248,7 @@ function main(){
 	// info button on map
 	infoBox.onAdd = function(map) {
 		this._div = L.DomUtil.create('div', 'button'); // create a div with a class "button"
-		this._div.innerHTML = '<div><a href="index.html">About Map</a></div>';
+		this._div.innerHTML = '&lt;div>&lt;a href="index.html">About Map&lt;/a>&lt;/div>';
 		return this._div;
 
 	}
@@ -236,12 +264,12 @@ function main(){
 				grades = [0, 450, 650, 1000, 1500],
         labels = [];
 
-		div.innerHTML += 'Hydrant Flow Rate (GPM)<br>'
+		div.innerHTML += 'Hydrant Flow Rate (GPM)&lt;br>'
     // loop through colours and generate a label with a colored point for each interval
-    for (var i = 0; i < grades.length; i++) {
+    for (var i = 0; i &lt; grades.length; i++) {
         div.innerHTML +=
-            '<circle style="background:' + hydrantColour(grades[i] + 1) + '"></circle> ' +
-            grades[i] + (grades[i + 1] ? ' &ndash; ' + grades[i + 1] + '<br>' : '+');
+            '&lt;circle style="background:' + hydrantColour(grades[i] + 1) + '">&lt;/circle> ' +
+            grades[i] + (grades[i + 1] ? ' &amp;ndash; ' + grades[i + 1] + '&lt;br>' : '+');
     }
 
     return div;
@@ -319,3 +347,26 @@ function main(){
 
 	 });
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bufferStyle">bufferStyle</a></li><li><a href="global.html#hydrantColour">hydrantColour</a></li><li><a href="global.html#hydrantStyle">hydrantStyle</a></li><li><a href="global.html#locationStyle">locationStyle</a></li><li><a href="global.html#main">main</a></li><li><a href="global.html#makeBuffer">makeBuffer</a></li><li><a href="global.html#nearestHydrants">nearestHydrants</a></li><li><a href="global.html#onEachFeature">onEachFeature</a></li><li><a href="global.html#pointToLayer">pointToLayer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Mar 30 2017 21:03:44 GMT-0400 (EDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
