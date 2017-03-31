@@ -24,8 +24,7 @@
       <h1>Cambridge Hydrant Locator</h1>
     </div>
 
-    <br>
-
+    <br> <!-- break -->
     <hr> <!-- section break -->
 
     <!-- map button -->
@@ -47,11 +46,9 @@
       <p class="linespace">
         In 2016 alone, there were 550 building fires attended to by the city fire department <sup>3</sup>, including a devastating blaze that destroyed 16 buildings in one street. <sup>4</sup>.
       </p>
-
-      <br>
-
     </div>
 
+    <br> <!-- break -->
     <hr> <!-- section break -->
 
     <!--how it works -->
@@ -60,34 +57,50 @@
       <p class="linespace">
 
         <br>
-        1)	detecting and positioning a user on the map
+        1)	detects and positions a user on the map
 
         <br>
-        <img src="images/Location.png" alt="User Location" style="width:30px;">
+        <img src="images/Location.png" alt="User Location" style="width:40px;">
 
         <br>
-        2)	calculating a 200-metre buffer around the user location
+        2)	calculates a 200-metre buffer around the user location
 
         <br>
-        <img src="images/CirclePoint.png" alt="User Location" style="width:30px;">
+        <img src="images/CirclePoint.png" alt="User Location" style="width:40px;">
 
         <br>
-        3)	displaying all fire hydrants within the buffer
+        3)	displays all fire hydrants within the buffer
 
         <br>
-        <img src="images/FireIcon.png" alt="User Location" style="width:30px;">
-
-        <br>
-        <br>
-
-        To go to 'my location' on the map, a user must share or turn on their devices location. If a devices location is not shared, panning to an area of interest in the city will trigger the map to recalculate the buffer based on the centre of the map. Hydrants are colour categorised by flow rate, and can be individually selected to show their rate in Gallons Per Minute (GPM).
+        <img src="images/FireHIcon.png" alt="User Location" style="width:40px;">
       </p>
-
-      <br>
-
     </div>
 
+    <br> <!-- break -->
 
+    <div class="boxed line">
+      <p class="linespace" style = "color: white">
+        To use the 'my location' button on the map, a user must share or turn on their device's location. If a devices location is not shared, panning to an area of interest in the city will trigger the map to instead recalculate the buffer based on the centre of the map. Hydrants are colour categorised by flow rate, and can be individually selected to show their rate in Gallons Per Minute (GPM). Hydrants will not be drawn outside of the limits of the city.
+      </p>
+    </div>
+
+    <br> <!-- break -->
+    <hr> <!-- section break -->
+
+    <!--About Map Software -->
+    <div>
+      <h3>Mapping Software</h3>
+
+      <img src="images/MapIcon.png" alt="User Location" style="width:40px;">
+
+      <br> <!-- break -->
+
+      <p  style="font-size:small" class = "linespace">
+        This web map is generated using the <a href="http://leafletjs.com/">LeafletJS</a> web mapping library, and all rendering of data and visualization of points is performed by <a href="http://leafletjs.com/">LeafletJS</a> on the client device. Basemap tiles are sourced from <a href="https://www.mapbox.com/">Mapbox</a>, using <a href="https://www.openstreetmap.org/#map=5/51.500/-0.100">OpenStreetMap</a> data. All advanced geospatial analysis within the map are computed using functions from the <a href="http://turfjs.org/">Turf.JS</a> library.
+      </p>
+    </div>
+
+    <br> <!-- break -->
     <hr> <!-- section break -->
 
     <!-- map button -->
@@ -109,9 +122,10 @@
 
       <!-- copyrights -->
       <ul style="list-style-type:none">
-        <li> Circle Point Icon by: <a href="http://www.bogdanrosu.com/">Bogdan Rosu Creative</a></li>
-        <li> Location Icon &copy; Google Design</li>
-        <li> Fire Icon by: <a href="http://pixelbazaar.com/">Zlatko Najdenovski</a></li>
+        <li> <a href="https://www.iconfinder.com/icons/353397/circle_map_marker_pin_icon#size=128">Circle Point Icon</a> by: <a href="http://www.bogdanrosu.com/">Bogdan Rosu Creative</a>. Licenced for commercial use</li>
+        <li> <a href="https://material.io/icons/">Location Icon</a> &copy; Google Design.</li>
+        <li> <a href="https://thenounproject.com/term/hydrant/215095/">Fire Icon</a> by: <a href="https://thenounproject.com/felixbroennimann/">Felix Brönnimann</a>. Licence under <a href ="https://creativecommons.org/licenses/by/3.0/us/">CC BY 3.0</a></li>
+        <li><a href="https://thenounproject.com/term/map/1733/">Map Icon</a> by: <a href="https://thenounproject.com/Gatada/">Johan H. W. Basberg</a></li>
       </ul>
 
     </div> <!-- end footer -->

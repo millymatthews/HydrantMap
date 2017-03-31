@@ -1,13 +1,5 @@
 // hydrants.js - Javascript for displaying Cambridge MA tree map
 
-/* NOTES: how long is a hose?
-*	projection of buffer oval
-* if user moves map before data is loaded - breaks?
-*
-
-*
-*/
-
 /**
 * hydrants.js 0.1 March 2017
 * @copyright (c) Milly Matthews-Mulroy
@@ -92,11 +84,11 @@ var onEachFeature = function (feature, layer) {
 
 /**
 * geojson point data to leaflet layer
-* @param {object}	feature - features
+* @param {object}	feature - hydrant features
 * @param {object}	latlng - feature latitude and longitude
 */
 var pointToLayer = function (feature, latlng) {
-	//get hydrant flow rate
+	// get hydrant flow rate
 	// style points
 	var fc = hydrantColour(feature.properties.HYDRANT_GPM);
 	var style = hydrantStyle(fc);
@@ -162,12 +154,12 @@ var locationStyle = function(){
 }
 
 /**
-* initialise  - main function
+* initialise  - main map function
 */
 function main(){
 
 	// leaflet map instance
-	var latlon =  new L.LatLng(42.3736, -71.1097); // cambridge
+	var latlon =  new L.LatLng(42.375276, -71.114652); // cambridge
 	var map = L.map('mapid').setView(latlon, 17); // initialise map
 
 	//drawing order - leaflet panes
@@ -189,7 +181,7 @@ function main(){
 	}).addTo(map);
 
 	// user location
-	map.locate({setView: true, maxZoom: 17});
+	//map.locate({setView: true, maxZoom: 17});
 
 	/**
 	* locate user on the map
@@ -277,11 +269,13 @@ function main(){
 			onEachFeature: onEachFeature,
 			pointToLayer: pointToLayer
 		});
+
 		hydrantsLayer.addTo(map);
 
 		bufferLayer = L.geoJSON(currentBuffer, {
 			style: bufferStyle()
 		});
+
 		bufferLayer.addTo(map); //add to map
 
 	}
@@ -294,7 +288,7 @@ function main(){
 		// first, store the hydrants
 		hydrantsData = hydrants;
 		// second, get the buffer
-		var buffer = makeBuffer(-71.1097, 42.3736);
+		var buffer = makeBuffer(-71.114652, 42.375276);
 		// third, point in polygon
 		var nearHydrants = nearestHydrants(hydrantsData, buffer);
 		// draw layers
